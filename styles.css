@@ -226,16 +226,6 @@ section { padding: 88px 0; }
 .contact-card h3 { font-size: 1.15rem; margin-bottom: 6px; }
 .contact-card p { color: var(--ink-soft); font-size: 16px; }
 .contact-card a { font-weight: 600; }
-form.contact-form { display: grid; gap: 16px; }
-.field label { display: block; font-weight: 600; font-size: 14.5px; margin-bottom: 6px; }
-.field input, .field select, .field textarea {
-  width: 100%; font: inherit; font-size: 16px; color: var(--ink);
-  background: var(--white); border: 1.5px solid var(--line); border-radius: 10px; padding: 12px 14px;
-}
-.field input:focus, .field select:focus, .field textarea:focus { outline: none; border-color: var(--ochre); box-shadow: 0 0 0 3px rgba(232,163,61,.2); }
-.field textarea { min-height: 150px; resize: vertical; }
-.row-2 { display: grid; gap: 16px; grid-template-columns: 1fr; }
-@media (min-width: 600px) { .row-2 { grid-template-columns: 1fr 1fr; } }
 
 /* ---------- Blog ---------- */
 .post-card { background: var(--white); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; display: flex; flex-direction: column; text-decoration: none; color: var(--ink); transition: transform .2s ease, box-shadow .2s ease; }

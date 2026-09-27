@@ -11,8 +11,9 @@
   }
   // Current year in footer
   document.querySelectorAll('.yr').forEach(function (el) { el.textContent = new Date().getFullYear(); });
-  // Pre-select contact topic from ?topic=
+  // Set contact email subject from ?topic=
+  var subjects = { donation: 'Making a donation', partnership: 'Partnership', equipment: 'Donating equipment' };
   var topic = new URLSearchParams(window.location.search).get('topic');
-  var select = document.getElementById('topic');
-  if (topic && select && select.querySelector('option[value="' + topic + '"]')) select.value = topic;
+  var emailBtn = document.getElementById('email-button');
+  if (emailBtn && subjects[topic]) emailBtn.href += '?subject=' + encodeURIComponent(subjects[topic]);
 })();
