@@ -32,8 +32,12 @@
     </button>
     <ul class="nav" id="site-nav">
       <li><a href="index.html" aria-current="page">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="team.html">Team</a></li>
+      <li class="has-sub">
+        <a href="about.html">About <span class="caret" aria-hidden="true">▾</span></a>
+        <ul class="subnav">
+          <li><a href="team.html">Team</a></li>
+        </ul>
+      </li>
       <li><a href="our-work.html">Our Work</a></li>
       <li><a href="blog/index.html">Blog</a></li>
       <li><a class="nav-cta" href="https://app.taspo.org" target="_blank" rel="noopener">App</a></li>

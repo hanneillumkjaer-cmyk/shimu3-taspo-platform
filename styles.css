@@ -58,6 +58,16 @@ a { color: var(--ink); }
 .nav .nav-cta:hover { background: #f0b458; color: var(--ink-deep); }
 .nav .nav-cta-dark { background: var(--ink); color: var(--white); white-space: nowrap; }
 .nav .nav-cta-dark:hover { background: var(--ink-deep); color: var(--white); }
+.nav .has-sub { position: relative; }
+.nav .caret { font-size: .75em; margin-left: 2px; }
+.nav .has-sub:has([aria-current="page"]) > a { color: var(--ochre-deep); }
+.subnav {
+  list-style: none; position: absolute; top: 100%; left: 0; z-index: 60; min-width: 180px;
+  background: var(--white); border: 1px solid var(--line); border-radius: 12px; box-shadow: var(--shadow);
+  padding: 6px; display: none;
+}
+.has-sub:hover .subnav, .has-sub:focus-within .subnav { display: block; }
+.subnav a { display: block; }
 
 .menu-toggle {
   display: none; background: none; border: 0; cursor: pointer;
@@ -76,6 +86,8 @@ a { color: var(--ink); }
   .nav.open { display: flex; }
   .nav a { display: block; padding: 14px 12px; font-size: 17px; }
   .nav .nav-cta { margin: 10px 0 0; text-align: center; }
+  .subnav { display: block; position: static; min-width: 0; background: none; border: 0; box-shadow: none; padding: 0 0 0 16px; }
+  .nav .caret { display: none; }
 }
 
 /* ---------- Typography ---------- */
