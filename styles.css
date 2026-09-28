@@ -48,6 +48,7 @@ a { color: var(--ink); }
   display: grid; place-items: center; flex-shrink: 0;
   font-family: var(--serif); font-weight: 700; font-size: 21px; color: var(--ochre);
 }
+.brand-logo { width: 48px; height: 48px; flex: none; }
 .brand-name { font-family: var(--serif); font-weight: 700; font-size: 21px; letter-spacing: 0.04em; line-height: 1.1; display: block; }
 .brand-sub { display: block; font-size: 11.5px; font-weight: 500; color: var(--ink-soft); letter-spacing: 0.02em; }
 
