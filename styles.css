@@ -70,7 +70,7 @@ a { color: var(--ink); }
 }
 .menu-toggle svg { margin: 0 auto; }
 
-@media (max-width: 1140px) {
+@media (max-width: 1020px) {
   .menu-toggle { display: block; }
   .nav {
     position: absolute; top: 76px; left: 0; right: 0;
