@@ -12,11 +12,6 @@
   --ochre: #e8a33d;
   --ochre-deep: #b8741a;
   --leaf: #2f7d5b;
-  --logo-green: #28b828;
-  --logo-green-light: #48c348;
-  --logo-green-deep: #22a022;
-  --logo-blue: #1070c0;
-  --logo-blue-deep: #0c5c9e;
   --line: #e6ddcf;
   --white: #ffffff;
   --radius: 18px;
@@ -59,10 +54,10 @@ a { color: var(--ink); }
 }
 .nav a:hover { background: var(--sand-deep); }
 .nav a[aria-current="page"] { color: var(--ochre-deep); }
-.nav .nav-cta { background: var(--logo-green-light); color: var(--ink-deep); font-weight: 600; margin-left: 8px; }
-.nav .nav-cta:hover { background: var(--logo-green); color: var(--ink-deep); }
-.nav .nav-cta-blue { background: var(--logo-blue); color: var(--white); white-space: nowrap; }
-.nav .nav-cta-blue:hover { background: var(--logo-blue-deep); color: var(--white); }
+.nav .nav-cta { background: var(--ochre); color: var(--ink-deep); font-weight: 600; margin-left: 8px; }
+.nav .nav-cta:hover { background: #f0b458; color: var(--ink-deep); }
+.nav .nav-cta-dark { background: var(--ink); color: var(--white); white-space: nowrap; }
+.nav .nav-cta-dark:hover { background: var(--ink-deep); color: var(--white); }
 
 .menu-toggle {
   display: none; background: none; border: 0; cursor: pointer;
