@@ -15,6 +15,8 @@
   --logo-green: #28b828;
   --logo-green-light: #48c348;
   --logo-green-deep: #22a022;
+  --logo-blue: #1070c0;
+  --logo-blue-deep: #0c5c9e;
   --line: #e6ddcf;
   --white: #ffffff;
   --radius: 18px;
@@ -53,12 +55,14 @@ a { color: var(--ink); }
 .nav { display: flex; align-items: center; gap: 4px; list-style: none; }
 .nav a {
   text-decoration: none; font-size: 15px; font-weight: 500; color: var(--ink);
-  padding: 8px 14px; border-radius: 8px; transition: background .15s ease;
+  padding: 8px 14px; border-radius: 8px; transition: background .15s ease; white-space: nowrap;
 }
 .nav a:hover { background: var(--sand-deep); }
 .nav a[aria-current="page"] { color: var(--ochre-deep); }
 .nav .nav-cta { background: var(--logo-green-light); color: var(--ink-deep); font-weight: 600; margin-left: 8px; }
 .nav .nav-cta:hover { background: var(--logo-green); color: var(--ink-deep); }
+.nav .nav-cta-blue { background: var(--logo-blue); color: var(--white); white-space: nowrap; }
+.nav .nav-cta-blue:hover { background: var(--logo-blue-deep); color: var(--white); }
 
 .menu-toggle {
   display: none; background: none; border: 0; cursor: pointer;
@@ -66,7 +70,7 @@ a { color: var(--ink); }
 }
 .menu-toggle svg { margin: 0 auto; }
 
-@media (max-width: 900px) {
+@media (max-width: 1140px) {
   .menu-toggle { display: block; }
   .nav {
     position: absolute; top: 76px; left: 0; right: 0;
@@ -75,7 +79,7 @@ a { color: var(--ink); }
     padding: 8px 16px 20px; display: none;
   }
   .nav.open { display: flex; }
-  .nav a { padding: 14px 12px; font-size: 17px; }
+  .nav a { display: block; padding: 14px 12px; font-size: 17px; }
   .nav .nav-cta { margin: 10px 0 0; text-align: center; }
 }
 
