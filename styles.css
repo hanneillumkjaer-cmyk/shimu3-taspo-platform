@@ -344,6 +344,7 @@ section { padding: 88px 0; }
 }
 .prose .note { background: var(--sand-deep); border-radius: 14px; padding: 20px 24px; margin-top: 28px; font-size: 15.5px; color: var(--ink-soft); }
 .prose a { color: var(--ochre-deep); font-weight: 600; }
+.prose .btn-primary { color: var(--white); }
 .author-box { display: flex; gap: 16px; align-items: center; border-top: 1px solid var(--line); padding-top: 28px; margin-top: 48px; }
 .author-box .avatar { margin: 0; width: 56px; height: 56px; font-size: 20px; }
 .author-box p { margin: 0; font-size: 15px; }
