@@ -365,6 +365,7 @@ section { padding: 88px 0; }
 .site-footer li { margin-bottom: 8px; }
 .site-footer a { color: #c9d6de; text-decoration: none; }
 .site-footer a:hover { color: var(--ochre); }
+.site-footer .social-link { display: inline-flex; align-items: center; gap: 8px; }
 .footer-bottom { border-top: 1px solid rgba(255,255,255,.1); margin-top: 48px; padding-top: 24px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; font-size: 14px; color: #9fb3c0; }
 
 /* ---------- Utilities ---------- */
