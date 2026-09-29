@@ -176,6 +176,7 @@ section { padding: 88px 0; }
 @media (min-width: 900px) { .split { grid-template-columns: 1fr 1fr; } .split.reverse > :first-child { order: 2; } }
 .split p + p { margin-top: 14px; }
 .split p { color: var(--ink-soft); }
+.split-photo { width: 100%; height: auto; border-radius: var(--radius); box-shadow: var(--shadow); }
 .bg-ink .split p { color: #c9d6de; }
 
 .checklist { list-style: none; margin-top: 22px; }
