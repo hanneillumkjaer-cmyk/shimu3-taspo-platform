@@ -75,7 +75,7 @@ a { color: var(--ink); }
 }
 .menu-toggle svg { margin: 0 auto; }
 
-@media (max-width: 1020px) {
+@media (max-width: 1060px) {
   .menu-toggle { display: block; }
   .nav {
     position: absolute; top: 76px; left: 0; right: 0;
@@ -237,6 +237,23 @@ section { padding: 88px 0; }
 .contact-card h3 { font-size: 1.15rem; margin-bottom: 6px; }
 .contact-card p { color: var(--ink-soft); font-size: 16px; }
 .contact-card a { font-weight: 600; }
+
+/* ---------- Donate ---------- */
+.donate-panel {
+  max-width: 40rem; margin: 0 auto; padding: 40px 36px;
+  background: var(--white); border: 6px solid #cfd6db; border-radius: var(--radius);
+}
+.donate-panel h1 { font-size: clamp(1.9rem, 4vw, 2.6rem); margin: 14px 0 18px; }
+.donate-panel p { color: var(--ink-soft); }
+.donate-panel p + p { margin-top: 14px; }
+.donate-button { margin: 28px 0 24px; min-height: 48px; font-size: 1.05rem; }
+.donate-button:focus-visible { outline: 3px solid var(--ochre); outline-offset: 3px; }
+.donate-panel .donate-note { font-size: 15.5px; }
+.donate-note a { color: var(--ochre-deep); font-weight: 600; }
+@media (max-width: 480px) {
+  .donate-panel { padding: 28px 20px; }
+  .donate-button { display: block; width: 100%; text-align: center; }
+}
 
 /* ---------- Licences ---------- */
 .licence-grid { display: grid; gap: 24px; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); }
