@@ -58,6 +58,8 @@ a { color: var(--ink); }
 .nav .nav-cta:hover { background: #f0b458; color: var(--ink-deep); }
 .nav .nav-cta-dark { background: var(--ink); color: var(--white); white-space: nowrap; }
 .nav .nav-cta-dark:hover { background: var(--ink-deep); color: var(--white); }
+.nav .nav-cta-donate, .nav .nav-cta-donate[aria-current="page"] { background: var(--leaf); color: var(--white); }
+.nav .nav-cta-donate:hover { background: #256a4c; color: var(--white); }
 .nav .has-sub { position: relative; }
 .nav .caret { font-size: .75em; margin-left: 2px; }
 .nav .has-sub:has([aria-current="page"]) > a { color: var(--ochre-deep); }
