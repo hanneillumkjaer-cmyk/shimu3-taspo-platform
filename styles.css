@@ -137,9 +137,9 @@ section { padding: 88px 0; }
 /* ---------- Hero ---------- */
 .hero { padding: 80px 0 88px; }
 .hero .wrap { display: grid; grid-template-columns: 1fr; gap: 56px; align-items: center; }
-@media (min-width: 900px) { .hero .wrap { grid-template-columns: 1.15fr 1fr; } }
+.hero .hero-photo-wrap { margin-top: 56px; }
 .hero h1 { max-width: 14ch; }
-.hero .lead { margin-top: 24px; }
+.hero .lead { max-width: 62ch; margin-top: 24px; }
 
 .page-hero { padding: 72px 0 56px; border-bottom: 1px solid var(--line); }
 .page-hero h1 { max-width: 18ch; }
