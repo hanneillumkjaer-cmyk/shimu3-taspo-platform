@@ -60,3 +60,21 @@
     if (e.target.closest && e.target.closest('.licence-card, .licence-lightbox-body')) e.preventDefault();
   });
 })();
+
+// Branded video overlay: load the YouTube player only when it is clicked.
+(function () {
+  document.querySelectorAll(".video-overlay[data-embed]").forEach(function (overlay) {
+    overlay.addEventListener("click", function (e) {
+      e.preventDefault();
+      var src = overlay.getAttribute("data-embed");
+      var frame = document.createElement("iframe");
+      frame.src = src + (src.indexOf("?") > -1 ? "&" : "?") + "autoplay=1&rel=0";
+      frame.title = overlay.getAttribute("data-title") || "Video";
+      frame.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
+      frame.setAttribute("referrerpolicy", "strict-origin-when-cross-origin");
+      frame.allowFullscreen = true;
+      overlay.parentNode.replaceChild(frame, overlay);
+      frame.focus();
+    });
+  });
+})();

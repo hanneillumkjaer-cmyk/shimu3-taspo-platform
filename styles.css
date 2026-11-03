@@ -381,6 +381,33 @@ section { padding: 88px 0; }
 .video-frame { position: relative; aspect-ratio: 16 / 9; border-radius: 16px; overflow: hidden; background: var(--ink); box-shadow: var(--shadow); }
 .video-frame iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
 .video figcaption { margin-top: 10px; font-size: 14.5px; color: var(--ink-soft); }
+/* Branded click-to-play overlay for embedded videos */
+.video-overlay { position: absolute; inset: 0; display: block; color: var(--white); text-decoration: none; background: var(--ink-deep); overflow: hidden; cursor: pointer; }
+.prose .video-overlay { color: var(--white); font-weight: 400; }
+.video-overlay-bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 30%; transition: transform .6s ease; }
+.video-overlay:hover .video-overlay-bg { transform: scale(1.04); }
+.video-overlay-shade { position: absolute; inset: 0; background: linear-gradient(135deg, rgba(22, 48, 63, .94) 0%, rgba(31, 59, 77, .82) 52%, rgba(232, 163, 61, .62) 100%); transition: opacity .3s ease; }
+.video-overlay:hover .video-overlay-shade { opacity: .88; }
+.video-overlay::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 6px; background: linear-gradient(90deg, var(--ochre), var(--leaf) 55%, var(--ink)); }
+.video-overlay-brand { position: absolute; top: 18px; left: 20px; display: inline-flex; align-items: center; gap: 10px; font-family: var(--serif); font-weight: 700; letter-spacing: .06em; }
+.video-overlay-brand img { width: 34px; height: 34px; padding: 3px; background: var(--white); border-radius: 10px; }
+.video-overlay-play { position: absolute; top: 50%; left: 50%; width: 84px; height: 84px; margin: -42px 0 0 -42px; border-radius: 50%; background: var(--ochre); color: var(--ink-deep); display: grid; place-items: center; padding-left: 4px; box-shadow: 0 0 0 10px rgba(232, 163, 61, .28), 0 12px 30px rgba(0, 0, 0, .3); transition: transform .2s ease, background .2s ease; }
+.video-overlay:hover .video-overlay-play { transform: scale(1.08); background: #f0b458; }
+.video-overlay:focus-visible { outline: 3px solid var(--ochre); outline-offset: -4px; }
+.video-overlay-text { position: absolute; left: 24px; right: 24px; bottom: 28px; }
+.video-overlay-tag { display: inline-block; background: var(--ochre); color: var(--ink-deep); font-weight: 600; font-size: 12.5px; letter-spacing: .06em; text-transform: uppercase; padding: 5px 12px; border-radius: 999px; line-height: 1.4; }
+.video-overlay-title { display: block; margin-top: 10px; font-family: var(--serif); font-weight: 700; font-size: clamp(1.1rem, 2.6vw, 1.7rem); line-height: 1.2; max-width: 26ch; }
+@media (max-width: 520px) {
+  .video-overlay-play { top: 36%; width: 54px; height: 54px; margin: -27px 0 0 -27px; box-shadow: 0 0 0 7px rgba(232, 163, 61, .28), 0 8px 20px rgba(0, 0, 0, .3); }
+  .video-overlay-play svg { width: 22px; height: 22px; }
+  .video-overlay-brand { top: 12px; left: 14px; }
+  .video-overlay-brand span { display: none; }
+  .video-overlay-text { left: 14px; right: 14px; bottom: 16px; }
+  .video-overlay-tag { font-size: 10.5px; padding: 3px 9px; }
+  .video-overlay-title { font-size: 1rem; margin-top: 6px; }
+}
+@media (prefers-reduced-motion: reduce) { .video-overlay-bg, .video-overlay-shade, .video-overlay-play { transition: none; } }
+
 .author-box { display: flex; gap: 16px; align-items: center; border-top: 1px solid var(--line); padding-top: 28px; margin-top: 48px; }
 .author-box .avatar { margin: 0; width: 56px; height: 56px; font-size: 20px; }
 .author-box p { margin: 0; font-size: 15px; }
