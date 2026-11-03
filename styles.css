@@ -378,6 +378,18 @@ section { padding: 88px 0; }
 .author-box .avatar { margin: 0; width: 56px; height: 56px; font-size: 20px; }
 .author-box p { margin: 0; font-size: 15px; }
 
+/* ---------- Partnership / news page ---------- */
+.prose ul.needs { list-style: none; margin: 20px 0 0; padding: 0; display: grid; gap: 12px; }
+.prose ul.needs li { margin: 0; background: var(--white); border: 1px solid var(--line); border-left: 4px solid var(--ochre); border-radius: 0 12px 12px 0; padding: 14px 18px; color: var(--ink-soft); }
+.card .muted + p { margin-top: 10px; }
+.needs strong { display: block; margin-bottom: 2px; color: var(--ink); }
+.prose blockquote .quote-en { display: block; margin-top: 8px; font-family: var(--sans); font-size: 1rem; font-style: italic; color: var(--ink-soft); }
+.gallery { display: grid; gap: 18px; grid-template-columns: 1fr; margin-top: 20px; }
+@media (min-width: 560px) { .gallery { grid-template-columns: 1fr 1fr; } }
+.gallery figure { margin: 0; }
+.gallery img { width: 100%; height: auto; aspect-ratio: 16 / 10; object-fit: cover; object-position: center 30%; border-radius: 14px; }
+.gallery figcaption { margin-top: 8px; font-size: 14.5px; line-height: 1.45; color: var(--ink-soft); }
+
 /* ---------- Footer ---------- */
 .site-footer { background: var(--ink-deep); color: #c9d6de; padding: 64px 0 32px; font-size: 15.5px; }
 .footer-grid { display: grid; gap: 36px; grid-template-columns: 1fr; }
